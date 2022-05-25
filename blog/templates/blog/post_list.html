@@ -3,16 +3,12 @@
 <head> <title> blog sur Django</title></head>
 <body>
 <header><h1><a href="/">Le Blog Django<a></h1></header>
+{% for post in posts %}
 <article>
-	<time>publié: 14.04.2022,12:15</time>
-	<h2><a href="">Mon premier post</a><h2>
-	<p>Un chien-loup est le résultat du croisement de la forme domestique (chien) de l'espèce canis lupus et de sa forme sauvage (Loup gris commun).<br>On appelle également chiens-loups les membres des lignées résultant de la reproduction de chiens-loups entre eux. Cette descendance, une fois stabilisée peut former une race de chien-loup domestique</p>
+	<time>publié: {{post.published_date}}</time>
+	<h2><a href="">{{post.titre}}</a></h2>
+	<p>{{post.texte}}</p>
 </article>
-<article>
-	<time>publié: 14.04.2022,12:17</time>
-	<h2><a href="">Mon deuxième post</a><h2>
-	<p>Le berger allemand (aussi appelé berger d’Alsace, berger alsacien ou chien-loup d'Alsace)1,2 est une race de chiens (Canis lupus familiaris) tirant son nom de son pays d'origine, l'Allemagne,
-		<br>où elle est apparue à la fin du xixe siècle. La Fédération cynologique internationale le reconnaît sous le nom de Deutscher Schäferhund, ce qui laisse à penser que durant des milliers d'années, des animaux proches des bergers allemands et de leur cousins belges ou hollandais ont existé dans cette région d'Europe.</p>
-</article>
+{% endfor %}
 </body>
 </html>
