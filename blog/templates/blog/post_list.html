@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head> <title> blog sur Django </title></head>
+<head>
+<title> blog sur Django </title>
+</head>
 <body>
-<header><h1><a href="/">Le Blog Django</a></h1></header>
+<header>
+<h1><a href="/">Le Blog Django</a></h1>
+</header>
 {% for post in posts %}
 <article>
 	<time>publié: {{post.published_date}}</time>
